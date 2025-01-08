@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug - Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    let newId = "dynamicId";
+    // Correct way to access the element after it's added to the DOM
+    setTimeout(function() {
+        let newDiv = document.createElement('div');
+        newDiv.id = newId;
+        newDiv.innerHTML = "Dynamically added text";
+        document.body.appendChild(newDiv);
+        console.log(document.getElementById(newId).innerHTML);
+    }, 100); 
+  </script>
+</body>
+</html>
