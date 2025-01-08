@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Incorrect way to access an element with a dynamically created ID
+    let newId = "dynamicId";
+    document.getElementById(newId).innerHTML = "Dynamically added text";
+  </script>
+</body>
+</html>
